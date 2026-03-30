@@ -1,0 +1,115 @@
+    :root {
+            --obsidian: #0A0A0A;
+            --gold: #D4AF37;
+            --champagne: #F1E5AC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: var(--obsidian);
+            font-family: 'Playfair Display', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--champagne);
+        }
+
+        /* Background Particle Canvas */
+        #dustCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Layout Container */
+        .poster {
+            position: relative;
+            z-index: 2;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            animation: masterFade 3s ease-out forwards;
+        }
+
+        /* Top Accent */
+        .date-accent {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.5rem;
+            text-transform: uppercase;
+            color: var(--gold);
+            opacity: 0.8;
+        }
+
+        /* Liquid Gold Heading */
+        .main-heading {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(
+                to right, 
+                #BF953F, 
+                #FCF6BA, 
+                #B38728, 
+                #FBF5B7, 
+                #AA771C
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
+        }
+
+        /* The Heart */
+        .poetic-text {
+            font-style: italic;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            padding: 0 10px;
+            color: rgba(241, 229, 172, 0.9);
+            border-left: 1px solid var(--gold);
+            border-right: 1px solid var(--gold);
+        }
+
+        /* The Prayer */
+        .prayer {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            letter-spacing: 0.02rem;
+            font-weight: 400;
+            color: var(--gold);
+        }
+
+        /* Animations */
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        @keyframes masterFade {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Subtle Gold Line */
+        .divider {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin: 0 auto;
+            opacity: 0.5;
+        } 
