@@ -1,4 +1,4 @@
-    :root {
+ :root {
             --obsidian: #0A0A0A;
             --gold: #D4AF37;
             --champagne: #F1E5AC;
@@ -112,4 +112,4 @@
             background: var(--gold);
             margin: 0 auto;
             opacity: 0.5;
-        } 
+        }
