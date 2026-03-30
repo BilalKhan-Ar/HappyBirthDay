@@ -1,4 +1,4 @@
-    const canvas = document.getElementById('dustCanvas');
+  const canvas = document.getElementById('dustCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
 
